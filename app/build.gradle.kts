@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.questoes"
+    namespace = "com.amazonas.questoes"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.questoes"
+        applicationId = "com.amazonas.questoes"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
