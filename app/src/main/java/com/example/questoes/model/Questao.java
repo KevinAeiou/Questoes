@@ -1,9 +1,10 @@
 package com.example.questoes.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class Questao {
+public class Questao implements Serializable {
     private String id;
     private String descricao;
     private String banca;

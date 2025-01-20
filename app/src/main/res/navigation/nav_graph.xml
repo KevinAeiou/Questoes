@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/QuestoesFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.questoes.FirstFragment"
+        android:name="com.example.questoes.ui.fragment.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -17,12 +17,33 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.questoes.SecondFragment"
+        android:name="com.example.questoes.ui.fragment.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/QuestoesFragment"
+        android:name="com.example.questoes.ui.fragment.QuestoesFragment"
+        android:label="Questões"
+        tools:layout="@layout/fragment_questoes">
+
+
+        <action
+            android:id="@+id/action_QuestoesFragment_to_questaoDetalhadaFragment"
+            app:destination="@id/questaoDetalhadaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questaoDetalhadaFragment"
+        android:name="com.example.questoes.QuestaoDetalhadaFragment"
+        android:label="fragment_questao_detalhada"
+        tools:layout="@layout/fragment_questao_detalhada" >
+        <argument
+            android:name="questao"
+            app:argType="com.example.questoes.model.Questao" />
     </fragment>
 </navigation>

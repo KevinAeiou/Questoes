@@ -1,7 +1,8 @@
-package com.example.questoes;
+package com.example.questoes.ui.activity;
 
 import android.os.Bundle;
 
+import com.example.questoes.R;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;

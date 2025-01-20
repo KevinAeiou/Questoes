@@ -1,4 +1,4 @@
-package com.example.questoes;
+package com.example.questoes.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import com.example.questoes.R;
 import com.example.questoes.databinding.FragmentSecondBinding;
 
 public class SecondFragment extends Fragment {
