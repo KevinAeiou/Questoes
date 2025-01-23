@@ -1,4 +1,4 @@
-package com.example.questoes.ui.fragment;
+package com.amazonas.questoes.ui.fragment;
 
 import static android.view.View.GONE;
 
@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -16,14 +16,14 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
-import com.example.questoes.R;
-import com.example.questoes.databinding.FragmentQuestoesBinding;
-import com.example.questoes.model.Questao;
-import com.example.questoes.ui.recyclerview.ListaQuestoesAdapter;
-import com.example.questoes.ui.viewModel.QuestaoViewModel;
-import com.google.android.material.snackbar.Snackbar;
+import com.amazonas.questoes.databinding.FragmentQuestoesBinding;
+import com.amazonas.questoes.model.Questao;
+import com.amazonas.questoes.ui.fragment.QuestoesFragmentDirections.ActionQuestoesFragmentToQuestaoDetalhadaFragment;
+import com.amazonas.questoes.ui.recyclerview.ListaQuestoesAdapter;
+import com.amazonas.questoes.ui.viewModel.QuestaoViewModel;
 
 import java.util.ArrayList;
 
@@ -35,7 +35,7 @@ public class QuestoesFragment extends Fragment {
     private SwipeRefreshLayout refreshQuestoes;
     private ProgressBar indicadorQuestoes;
     private QuestaoViewModel questaoViewModel;
-
+    private LinearLayout linearBotoesQuestoes;
 
     public QuestoesFragment() {
     }
@@ -82,7 +82,10 @@ public class QuestoesFragment extends Fragment {
     private void configuraAdapter() {
         adapterQuestoes = new ListaQuestoesAdapter(getContext(), questoes);
         recyclerQuestoes.setAdapter(adapterQuestoes);
-        adapterQuestoes.setOnItemClickListener(questao -> NavHostFragment.findNavController(QuestoesFragment.this).navigate(R.id.action_QuestoesFragment_to_questaoDetalhadaFragment));
+        adapterQuestoes.setOnItemClickListener(questao -> {
+            ActionQuestoesFragmentToQuestaoDetalhadaFragment acao = QuestoesFragmentDirections.actionQuestoesFragmentToQuestaoDetalhadaFragment(questao);
+            Navigation.findNavController(binding.getRoot()).navigate(acao);
+        });
     }
 
     private void inicializaComponentes() {

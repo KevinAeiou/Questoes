@@ -1,4 +1,6 @@
-package com.example.questoes.model;
+package com.amazonas.questoes.model;
+
+import androidx.annotation.NonNull;
 
 import java.util.UUID;
 
@@ -31,5 +33,11 @@ public class Comentario {
 
     public void setIdQuestao(String idQuestao) {
         this.idQuestao = idQuestao;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return descricao;
     }
 }

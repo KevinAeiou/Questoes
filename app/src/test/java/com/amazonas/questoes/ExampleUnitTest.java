@@ -1,4 +1,4 @@
-package com.example.questoes;
+package com.amazonas.questoes;
 
 import org.junit.Test;
 

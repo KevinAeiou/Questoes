@@ -1,4 +1,4 @@
-package com.example.questoes.ui.recyclerview;
+package com.amazonas.questoes.ui.recyclerview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,9 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.questoes.R;
-import com.example.questoes.model.Questao;
-import com.example.questoes.ui.recyclerview.adapter.listener.OnItemClickListenerQuestao;
+import com.amazonas.questoes.R;
+import com.amazonas.questoes.model.Questao;
+import com.amazonas.questoes.ui.recyclerview.adapter.listener.OnItemClickListenerQuestao;
 
 import java.util.ArrayList;
 

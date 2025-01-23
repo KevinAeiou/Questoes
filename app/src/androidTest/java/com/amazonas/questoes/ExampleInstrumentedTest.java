@@ -1,4 +1,4 @@
-package com.example.questoes;
+package com.amazonas.questoes;
 
 import android.content.Context;
 

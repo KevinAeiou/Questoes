@@ -1,4 +1,4 @@
-package com.example.questoes.model;
+package com.amazonas.questoes.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -13,6 +13,7 @@ public class Questao implements Serializable {
     private ArrayList<Alternativa> alternativas;
     private String gabarito;
     private String dificudade;
+
     private ArrayList<Comentario> comentarios;
     public Questao() {
         id = UUID.randomUUID().toString();
@@ -79,5 +80,17 @@ public class Questao implements Serializable {
 
     public void setDificudade(String dificudade) {
         this.dificudade = dificudade;
+    }
+
+    public boolean acertou(String idAlternativa) {
+        return gabarito.equals(idAlternativa);
+    }
+
+    public ArrayList<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(ArrayList<Comentario> comentarios) {
+        this.comentarios = comentarios;
     }
 }
