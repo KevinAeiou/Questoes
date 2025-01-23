@@ -16,7 +16,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import com.amazonas.questoes.databinding.FragmentQuestoesBinding;
@@ -35,7 +34,6 @@ public class QuestoesFragment extends Fragment {
     private SwipeRefreshLayout refreshQuestoes;
     private ProgressBar indicadorQuestoes;
     private QuestaoViewModel questaoViewModel;
-    private LinearLayout linearBotoesQuestoes;
 
     public QuestoesFragment() {
     }
