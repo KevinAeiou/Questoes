@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.questoes.ui.fragment.FirstFragment"
+        android:name="com.amazonas.questoes.ui.fragment.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.example.questoes.ui.fragment.SecondFragment"
+        android:name="com.amazonas.questoes.ui.fragment.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
@@ -28,22 +28,26 @@
 
     <fragment
         android:id="@+id/QuestoesFragment"
-        android:name="com.example.questoes.ui.fragment.QuestoesFragment"
+        android:name="com.amazonas.questoes.ui.fragment.QuestoesFragment"
         android:label="Questões"
         tools:layout="@layout/fragment_questoes">
-
-
         <action
             android:id="@+id/action_QuestoesFragment_to_questaoDetalhadaFragment"
-            app:destination="@id/questaoDetalhadaFragment" />
+            app:destination="@id/questaoDetalhadaFragment" >
+
+            <argument
+                android:name="questao"
+                app:argType="com.amazonas.questoes.model.Questao" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/questaoDetalhadaFragment"
-        android:name="com.example.questoes.QuestaoDetalhadaFragment"
-        android:label="fragment_questao_detalhada"
+        android:name="com.amazonas.questoes.ui.fragment.QuestaoDetalhadaFragment"
+        android:label="Questão"
         tools:layout="@layout/fragment_questao_detalhada" >
+
         <argument
             android:name="questao"
-            app:argType="com.example.questoes.model.Questao" />
+            app:argType="com.amazonas.questoes.model.Questao" />
     </fragment>
 </navigation>
