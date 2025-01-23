@@ -1,4 +1,4 @@
-package com.example.questoes.model;
+package com.amazonas.questoes.model;
 
 import java.util.UUID;
 
