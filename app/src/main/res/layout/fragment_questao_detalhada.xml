@@ -6,141 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.fragment.QuestaoDetalhadaFragment">
 
-    <TextView
-        android:id="@+id/txtBancaFragmentoQuestao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/stringBanca"
-        />
-
-    <TextView
-        android:id="@+id/txtAnoFragmentoQuestao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txtBancaFragmentoQuestao"
-        app:layout_constraintTop_toTopOf="@+id/txtBancaFragmentoQuestao"
-        tools:text="@string/stringAno"
-        />
-
-    <TextView
-        android:id="@+id/txtDificudadeFragmentoQuestao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txtAnoFragmentoQuestao"
-        app:layout_constraintTop_toTopOf="@+id/txtAnoFragmentoQuestao"
-        tools:text="@string/stringDificudade"
-        />
-
-    <TextView
-        android:id="@+id/txtDescricaoFragmentoQuestao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="@+id/txtBancaFragmentoQuestao"
-        app:layout_constraintTop_toBottomOf="@+id/txtBancaFragmentoQuestao"
-        tools:text="@string/stringDescricao"
-        />
-
-    <RadioGroup
-        android:id="@+id/grupoBotoesFragmentoQuestao"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16sp"
-        app:layout_constraintWidth_max="320dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txtDescricaoFragmentoQuestao"
-        app:layout_constraintTop_toBottomOf="@+id/txtDescricaoFragmentoQuestao">
-
-        <RadioButton
-            android:id="@+id/botaoFragmentoQuestao1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start|center"
-            tools:text="Alternativa"
-            android:background="@drawable/botao_alternativa"
-            android:button="@android:color/transparent"
-            android:textSize="20sp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            />
-
-        <RadioButton
-            android:id="@+id/botaoFragmentoQuestao2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/botao_alternativa"
-            android:button="@android:color/transparent"
-            android:gravity="center|start"
-            android:paddingStart="16dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="10dp"
-            android:textSize="20sp"
-            tools:text="Alternativa" />
-
-        <RadioButton
-            android:id="@+id/botaoFragmentoQuestao3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start|center"
-            tools:text="Alternativa"
-            android:background="@drawable/botao_alternativa"
-            android:button="@android:color/transparent"
-            android:textSize="20sp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            />
-
-        <RadioButton
-            android:id="@+id/botaoFragmentoQuestao4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start|center"
-            tools:text="Alternativa"
-            android:background="@drawable/botao_alternativa"
-            android:button="@android:color/transparent"
-            android:textSize="20sp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            />
-
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/botaoResponderQuestao"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="22sp"
-        android:padding="16dp"
-        app:layout_goneMarginTop="20dp"
-        android:text="@string/stringResponder"
-        app:layout_constraintEnd_toEndOf="@+id/listaComentariosQuestao"
-        app:layout_constraintStart_toStartOf="@+id/listaComentariosQuestao"
-        app:layout_constraintTop_toBottomOf="@+id/listaComentariosQuestao"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <ListView
-        android:id="@+id/listaComentariosQuestao"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerFragmentoQuestao"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@id/grupoBotoesFragmentoQuestao"
-        app:layout_constraintEnd_toEndOf="@id/grupoBotoesFragmentoQuestao"
-        app:layout_constraintTop_toBottomOf="@+id/grupoBotoesFragmentoQuestao"
-        app:layout_constraintBottom_toTopOf="@id/botaoResponderQuestao"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
