@@ -2,8 +2,6 @@ package com.amazonas.questoes.ui.recyclerview.adapter;
 
 import static android.view.View.GONE;
 
-import static androidx.core.content.ContentProviderCompat.requireContext;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;

@@ -16,7 +16,6 @@ import com.amazonas.questoes.databinding.FragmentQuestaoDetalhadaBinding;
 import com.amazonas.questoes.model.Questao;
 import com.amazonas.questoes.ui.recyclerview.adapter.QuestaoDetalhadaAdapter;
 import com.amazonas.questoes.ui.viewModel.QuestaoViewModel;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
