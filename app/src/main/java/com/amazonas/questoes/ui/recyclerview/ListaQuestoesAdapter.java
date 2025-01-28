@@ -60,18 +60,17 @@ public class ListaQuestoesAdapter extends RecyclerView.Adapter<ListaQuestoesAdap
         private final TextView txtAno;
         private final TextView txtDificudade;
         private final TextView txtDescricao;
-        private Questao questao;
+
         public QuestaoViewHolder(@NonNull View itemView) {
             super(itemView);
             txtBanca = itemView.findViewById(R.id.txtBancaItemQuestao);
             txtAno = itemView.findViewById(R.id.txtAnoItemQuestao);
             txtDificudade = itemView.findViewById(R.id.txtDificudadeItemQuestao);
             txtDescricao = itemView.findViewById(R.id.txtDescricaoItemQuestao);
-            itemView.setOnClickListener(view -> onItemClickListener.onItemClick(questao));
+            itemView.setOnClickListener(view -> onItemClickListener.onItemClick(getAdapterPosition()));
         }
 
         public void vincula(Questao questao) {
-            this.questao = questao;
             preencheCampos(questao);
         }
 

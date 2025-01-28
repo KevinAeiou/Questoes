@@ -15,8 +15,8 @@
             app:destination="@id/questaoDetalhadaFragment" >
 
             <argument
-                android:name="questao"
-                app:argType="com.amazonas.questoes.model.Questao" />
+                android:name="posicaoQuestao"
+                app:argType="integer" />
         </action>
     </fragment>
     <fragment
@@ -26,7 +26,7 @@
         tools:layout="@layout/fragment_questao_detalhada" >
 
         <argument
-            android:name="questao"
-            app:argType="com.amazonas.questoes.model.Questao" />
+            android:name="posicaoQuestao"
+            app:argType="integer" />
     </fragment>
 </navigation>

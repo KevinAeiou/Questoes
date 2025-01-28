@@ -80,8 +80,8 @@ public class QuestoesFragment extends Fragment {
     private void configuraAdapter() {
         adapterQuestoes = new ListaQuestoesAdapter(getContext(), questoes);
         recyclerQuestoes.setAdapter(adapterQuestoes);
-        adapterQuestoes.setOnItemClickListener(questao -> {
-            ActionQuestoesFragmentToQuestaoDetalhadaFragment acao = QuestoesFragmentDirections.actionQuestoesFragmentToQuestaoDetalhadaFragment(questao);
+        adapterQuestoes.setOnItemClickListener(posicaoQuestao -> {
+            ActionQuestoesFragmentToQuestaoDetalhadaFragment acao = QuestoesFragmentDirections.actionQuestoesFragmentToQuestaoDetalhadaFragment(posicaoQuestao);
             Navigation.findNavController(binding.getRoot()).navigate(acao);
         });
     }

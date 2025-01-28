@@ -46,31 +46,17 @@ public class QuestaoDetalhadaFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         inicializaComponentes();
         configuraViewPagerAdapter();
+        int posicaoQuestao = QuestaoDetalhadaFragmentArgs.fromBundle(getArguments()).getPosicaoQuestao();
         questaoViewModel.pegaQuestoes().observe(getViewLifecycleOwner(), resultadoQuestoes -> {
             questoes = resultadoQuestoes;
             pagerAdapter.atualiza(questoes);
+            viewPagerQuestao.setCurrentItem(posicaoQuestao);
         });
     }
 
     private void configuraViewPagerAdapter() {
         pagerAdapter = new QuestaoDetalhadaAdapter(questoes, getContext());
         viewPagerQuestao.setAdapter(pagerAdapter);
-        viewPagerQuestao.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                super.onPageScrollStateChanged(state);
-            }
-        });
     }
 
     private void inicializaComponentes() {
